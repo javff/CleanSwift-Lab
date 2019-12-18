@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CarruselCell" id="8YY-gO-K4X" customClass="CarruselCell" customModule="CleanSwiftLab" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="281" height="191"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="281" height="191"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdy-VE-eS5">
+                        <rect key="frame" x="10" y="10" width="261" height="171"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ntT-Zk-xAU">
+                                <rect key="frame" x="0.0" y="0.0" width="261" height="171"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ntT-Zk-xAU" secondAttribute="bottom" id="EWq-Am-0PJ"/>
+                            <constraint firstAttribute="trailing" secondItem="ntT-Zk-xAU" secondAttribute="trailing" id="Jih-yk-QeU"/>
+                            <constraint firstItem="ntT-Zk-xAU" firstAttribute="top" secondItem="rdy-VE-eS5" secondAttribute="top" id="t7f-AO-aNa"/>
+                            <constraint firstItem="ntT-Zk-xAU" firstAttribute="leading" secondItem="rdy-VE-eS5" secondAttribute="leading" id="x3X-dS-b92"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="rdy-VE-eS5" secondAttribute="trailing" constant="10" id="KB6-oE-JWx"/>
+                <constraint firstItem="rdy-VE-eS5" firstAttribute="top" secondItem="8YY-gO-K4X" secondAttribute="top" constant="10" id="L6X-lS-IDF"/>
+                <constraint firstAttribute="bottom" secondItem="rdy-VE-eS5" secondAttribute="bottom" constant="10" id="eCs-fA-AHQ"/>
+                <constraint firstItem="rdy-VE-eS5" firstAttribute="leading" secondItem="8YY-gO-K4X" secondAttribute="leading" constant="10" id="gOz-Do-LPR"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="0c2-UH-7fW"/>
+            <size key="customSize" width="281" height="191"/>
+            <connections>
+                <outlet property="containerView" destination="rdy-VE-eS5" id="0Mf-Bv-pDb"/>
+                <outlet property="imageView" destination="ntT-Zk-xAU" id="0Q9-b9-JsS"/>
+            </connections>
+            <point key="canvasLocation" x="96.799999999999997" y="90.404797601199405"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeFeedView" customModule="CleanSwiftLab" customModuleProvider="target">
+            <connections>
+                <outlet property="containerStackView" destination="5Uf-L2-fNr" id="1oq-3m-e3C"/>
+                <outlet property="scrollView" destination="qZI-pa-0bj" id="4iK-Jg-KIi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="395" height="696"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qZI-pa-0bj">
+                    <rect key="frame" x="0.0" y="20" width="395" height="676"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="100" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5Uf-L2-fNr">
+                            <rect key="frame" x="0.0" y="0.0" width="395" height="100"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="5Uf-L2-fNr" firstAttribute="leading" secondItem="qZI-pa-0bj" secondAttribute="leading" id="3IZ-Zk-PMV"/>
+                        <constraint firstAttribute="width" secondItem="5Uf-L2-fNr" secondAttribute="width" id="aEC-sT-yXQ"/>
+                        <constraint firstItem="5Uf-L2-fNr" firstAttribute="top" secondItem="qZI-pa-0bj" secondAttribute="top" id="bvm-Nl-SKw"/>
+                        <constraint firstAttribute="trailing" secondItem="5Uf-L2-fNr" secondAttribute="trailing" id="ls0-3x-ixG"/>
+                        <constraint firstAttribute="bottom" secondItem="5Uf-L2-fNr" secondAttribute="bottom" id="mdM-Pq-kG3"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="qZI-pa-0bj" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="HHf-do-6Dw"/>
+                <constraint firstItem="qZI-pa-0bj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="VYV-Io-ef9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qZI-pa-0bj" secondAttribute="trailing" id="qNd-NZ-jb4"/>
+                <constraint firstAttribute="bottom" secondItem="qZI-pa-0bj" secondAttribute="bottom" id="u3v-qr-TIk"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="152.80000000000001" y="182.60869565217394"/>
+        </view>
+    </objects>
+</document>
