@@ -19,12 +19,12 @@ class HomeFeedViewController: BaseViewController <HomeFeedView> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setupView()
+        setupView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        interactor?.getFeed()
+        interactor?.getFeed()
     }
     
     private func setupView(){

@@ -24,15 +24,17 @@ class HomeSceneSpec: QuickSpec {
             
             beforeEach {
                 self.window = TestUtils.getWindow()
+                self.window.makeKeyAndVisible()
             }
             
             describe("render component"){
                
                 it("show carrusel component"){
+                    
                     let homeFeedViewController = HomeFeedCreator().configure()
-                    homeFeedViewController.view.backgroundColor = .blue
-                    self.window.rootViewController = homeFeedViewController
-                    expect(self.window.rootViewController?.view) == snapshot()
+                    let navigationController = UINavigationController(rootViewController: homeFeedViewController)
+                    self.window.rootViewController = navigationController
+                    expect(self.window.rootViewController?.view) == recordSnapshot()
                 }
             }
         }
