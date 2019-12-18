@@ -24,17 +24,16 @@ class HomeSceneSpec: QuickSpec {
             
             beforeEach {
                 self.window = TestUtils.getWindow()
-                self.window.makeKeyAndVisible()
             }
             
             describe("render component"){
                
-                it("show carrusel component"){
+                it("show first scene"){
                     
                     let homeFeedViewController = HomeFeedCreator().configure()
                     let navigationController = UINavigationController(rootViewController: homeFeedViewController)
                     self.window.rootViewController = navigationController
-                    expect(self.window.rootViewController?.view) == recordSnapshot()
+                    expect(self.window.rootViewController?.view) == snapshot()
                 }
             }
         }

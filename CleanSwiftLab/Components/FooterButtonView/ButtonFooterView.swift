@@ -30,7 +30,7 @@ class ButtonFooterView: BaseView {
             let button = createButton(with: buttonViewModel.text)
             containerStackView.addArrangedSubview(button)
             button.translatesAutoresizingMaskIntoConstraints = false
-            button.heightAnchor.constraint(equalToConstant: 40).isActive = true
+            button.heightAnchor.constraint(greaterThanOrEqualToConstant: 40).isActive = true
         }
     }
     
@@ -40,6 +40,7 @@ class ButtonFooterView: BaseView {
         button.layer.cornerRadius = 5
         button.layer.masksToBounds = true
         button.setTitleColor(UIColor(red:0.00, green:0.41, blue:0.98, alpha:1.0), for: .normal)
+        button.titleLabel?.numberOfLines = 0
         button.backgroundColor = UIColor.groupTableViewBackground
         return button
     }

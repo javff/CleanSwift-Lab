@@ -43,18 +43,17 @@
 		E24C635D239ECB8F00CBFF14 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24C635C239ECB8F00CBFF14 /* UIColor+Hex.swift */; };
 		E24C6360239F0B1F00CBFF14 /* HeroRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24C635F239F0B1F00CBFF14 /* HeroRouter.swift */; };
 		E2828FF023A312110001C354 /* SceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2828FEF23A312110001C354 /* SceneRouter.swift */; };
-		E2828FF423A339AF0001C354 /* SceneMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2828FF323A339AF0001C354 /* SceneMocks.swift */; };
 		E2828FF623A33B560001C354 /* HomeSceneTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2828FF523A33B560001C354 /* HomeSceneTest.swift */; };
 		E2828FF923A952EF0001C354 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2828FF823A952EF0001C354 /* TestUtils.swift */; };
 		E2828FFF23A958D70001C354 /* Home_feed__render_component__show_carrusel_component@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2828FFE23A958D70001C354 /* Home_feed__render_component__show_carrusel_component@2x.png */; };
 		E282900523A958F60001C354 /* ReferenceImages in Resources */ = {isa = PBXBuildFile; fileRef = E282900423A958F60001C354 /* ReferenceImages */; };
+		E282900923AA8EED0001C354 /* FooterButtonViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E282900823AA8EED0001C354 /* FooterButtonViewTest.swift */; };
 		E2844E2323998E2900F634E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2844E2223998E2900F634E7 /* AppDelegate.swift */; };
 		E2844E2523998E2900F634E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2844E2423998E2900F634E7 /* ViewController.swift */; };
 		E2844E2823998E2900F634E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2844E2623998E2900F634E7 /* Main.storyboard */; };
 		E2844E2B23998E2900F634E7 /* CleanSwiftLab.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2844E2923998E2900F634E7 /* CleanSwiftLab.xcdatamodeld */; };
 		E2844E2D23998E2C00F634E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2844E2C23998E2C00F634E7 /* Assets.xcassets */; };
 		E2844E3023998E2C00F634E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2844E2E23998E2C00F634E7 /* LaunchScreen.storyboard */; };
-		E2844E3B23998E2C00F634E7 /* CleanSwiftLabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2844E3A23998E2C00F634E7 /* CleanSwiftLabTests.swift */; };
 		E2844E4923998F3500F634E7 /* HomeFeedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2844E4823998F3500F634E7 /* HomeFeedInteractor.swift */; };
 		E2844E4B23998F3F00F634E7 /* HomeFeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2844E4A23998F3F00F634E7 /* HomeFeedPresenter.swift */; };
 		E2844E4D23998F6900F634E7 /* HomeFeedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2844E4C23998F6900F634E7 /* HomeFeedView.xib */; };
@@ -116,11 +115,11 @@
 		E24C635C239ECB8F00CBFF14 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		E24C635F239F0B1F00CBFF14 /* HeroRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroRouter.swift; sourceTree = "<group>"; };
 		E2828FEF23A312110001C354 /* SceneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneRouter.swift; sourceTree = "<group>"; };
-		E2828FF323A339AF0001C354 /* SceneMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneMocks.swift; sourceTree = "<group>"; };
 		E2828FF523A33B560001C354 /* HomeSceneTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSceneTest.swift; sourceTree = "<group>"; };
 		E2828FF823A952EF0001C354 /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 		E2828FFE23A958D70001C354 /* Home_feed__render_component__show_carrusel_component@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home_feed__render_component__show_carrusel_component@2x.png"; sourceTree = "<group>"; };
 		E282900423A958F60001C354 /* ReferenceImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReferenceImages; sourceTree = "<group>"; };
+		E282900823AA8EED0001C354 /* FooterButtonViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterButtonViewTest.swift; sourceTree = "<group>"; };
 		E2844E1F23998E2900F634E7 /* CleanSwiftLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanSwiftLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2844E2223998E2900F634E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2844E2423998E2900F634E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,7 +129,6 @@
 		E2844E2F23998E2C00F634E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2844E3123998E2C00F634E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2844E3623998E2C00F634E7 /* CleanSwiftLabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanSwiftLabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2844E3A23998E2C00F634E7 /* CleanSwiftLabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftLabTests.swift; sourceTree = "<group>"; };
 		E2844E3C23998E2C00F634E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2844E4823998F3500F634E7 /* HomeFeedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedInteractor.swift; sourceTree = "<group>"; };
 		E2844E4A23998F3F00F634E7 /* HomeFeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedPresenter.swift; sourceTree = "<group>"; };
@@ -394,7 +392,6 @@
 		E2828FF223A3399C0001C354 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				E2828FF323A339AF0001C354 /* SceneMocks.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -422,6 +419,22 @@
 				E2828FFE23A958D70001C354 /* Home_feed__render_component__show_carrusel_component@2x.png */,
 			);
 			path = HomeSceneTest;
+			sourceTree = "<group>";
+		};
+		E282900623AA8E280001C354 /* ComponentTest */ = {
+			isa = PBXGroup;
+			children = (
+				E282900723AA8ED00001C354 /* FooterButtonViewTest */,
+			);
+			path = ComponentTest;
+			sourceTree = "<group>";
+		};
+		E282900723AA8ED00001C354 /* FooterButtonViewTest */ = {
+			isa = PBXGroup;
+			children = (
+				E282900823AA8EED0001C354 /* FooterButtonViewTest.swift */,
+			);
+			path = FooterButtonViewTest;
 			sourceTree = "<group>";
 		};
 		E2844E1623998E2900F634E7 = {
@@ -469,7 +482,7 @@
 			children = (
 				E2828FF723A952DD0001C354 /* Utils */,
 				E2828FF123A339900001C354 /* HomeFeedSceneTest */,
-				E2844E3A23998E2C00F634E7 /* CleanSwiftLabTests.swift */,
+				E282900623AA8E280001C354 /* ComponentTest */,
 				E2844E3C23998E2C00F634E7 /* Info.plist */,
 				E282900423A958F60001C354 /* ReferenceImages */,
 			);
@@ -792,9 +805,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2828FF623A33B560001C354 /* HomeSceneTest.swift in Sources */,
-				E2828FF423A339AF0001C354 /* SceneMocks.swift in Sources */,
-				E2844E3B23998E2C00F634E7 /* CleanSwiftLabTests.swift in Sources */,
 				E2828FF923A952EF0001C354 /* TestUtils.swift in Sources */,
+				E282900923AA8EED0001C354 /* FooterButtonViewTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
