@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		63BBE064684FD14C0DE1F157 /* Pods_CleanSwiftLabTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC0B34F146D6F998AB93DBA /* Pods_CleanSwiftLabTests.framework */; };
 		AAA569CB3987B9269283DCD0 /* Pods_CleanSwiftLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E837916D3E79118F8B29F8 /* Pods_CleanSwiftLab.framework */; };
+		E211911423AAA516001A25F8 /* RouterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E211911323AAA516001A25F8 /* RouterApp.swift */; };
 		E22676C8239AA8D800B46987 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22676C7239AA8D800B46987 /* BaseViewController.swift */; };
 		E22676CA239AA98400B46987 /* HomeFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22676C9239AA98400B46987 /* HomeFeedViewController.swift */; };
 		E22676D3239AD80400B46987 /* CarruselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22676D1239AD80400B46987 /* CarruselCell.swift */; };
@@ -42,7 +43,7 @@
 		E24C635B239EC74A00CBFF14 /* HeroCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24C635A239EC74A00CBFF14 /* HeroCreator.swift */; };
 		E24C635D239ECB8F00CBFF14 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24C635C239ECB8F00CBFF14 /* UIColor+Hex.swift */; };
 		E24C6360239F0B1F00CBFF14 /* HeroRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24C635F239F0B1F00CBFF14 /* HeroRouter.swift */; };
-		E2828FF023A312110001C354 /* SceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2828FEF23A312110001C354 /* SceneRouter.swift */; };
+		E2828FF023A312110001C354 /* SceneCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2828FEF23A312110001C354 /* SceneCreator.swift */; };
 		E2828FF623A33B560001C354 /* HomeSceneTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2828FF523A33B560001C354 /* HomeSceneTest.swift */; };
 		E2828FF923A952EF0001C354 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2828FF823A952EF0001C354 /* TestUtils.swift */; };
 		E2828FFF23A958D70001C354 /* Home_feed__render_component__show_carrusel_component@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2828FFE23A958D70001C354 /* Home_feed__render_component__show_carrusel_component@2x.png */; };
@@ -62,6 +63,7 @@
 		E29BA858239DDCF400C81323 /* HeroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29BA857239DDCF400C81323 /* HeroView.xib */; };
 		E29BA85A239DDE6600C81323 /* HeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29BA859239DDE6600C81323 /* HeroView.swift */; };
 		E29BA860239DDFED00C81323 /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29BA85F239DDFED00C81323 /* HeroViewController.swift */; };
+		E2B2010723B0EC54008E1AFE /* ComponentCoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B2010623B0EC54008E1AFE /* ComponentCoreViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,7 @@
 		4988736FB6DD67BA43E53C4F /* Pods-CleanSwiftLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanSwiftLab.debug.xcconfig"; path = "Target Support Files/Pods-CleanSwiftLab/Pods-CleanSwiftLab.debug.xcconfig"; sourceTree = "<group>"; };
 		49BF640FB25F95848B884830 /* Pods-CleanSwiftLabTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanSwiftLabTests.release.xcconfig"; path = "Target Support Files/Pods-CleanSwiftLabTests/Pods-CleanSwiftLabTests.release.xcconfig"; sourceTree = "<group>"; };
 		C87EEE1A86F140CF84F08EF7 /* Pods-CleanSwiftLabTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanSwiftLabTests.debug.xcconfig"; path = "Target Support Files/Pods-CleanSwiftLabTests/Pods-CleanSwiftLabTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E211911323AAA516001A25F8 /* RouterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterApp.swift; sourceTree = "<group>"; };
 		E22676C7239AA8D800B46987 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E22676C9239AA98400B46987 /* HomeFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedViewController.swift; sourceTree = "<group>"; };
 		E22676D1239AD80400B46987 /* CarruselCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarruselCell.swift; sourceTree = "<group>"; };
@@ -114,7 +117,7 @@
 		E24C635A239EC74A00CBFF14 /* HeroCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCreator.swift; sourceTree = "<group>"; };
 		E24C635C239ECB8F00CBFF14 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		E24C635F239F0B1F00CBFF14 /* HeroRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroRouter.swift; sourceTree = "<group>"; };
-		E2828FEF23A312110001C354 /* SceneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneRouter.swift; sourceTree = "<group>"; };
+		E2828FEF23A312110001C354 /* SceneCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCreator.swift; sourceTree = "<group>"; };
 		E2828FF523A33B560001C354 /* HomeSceneTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSceneTest.swift; sourceTree = "<group>"; };
 		E2828FF823A952EF0001C354 /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 		E2828FFE23A958D70001C354 /* Home_feed__render_component__show_carrusel_component@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home_feed__render_component__show_carrusel_component@2x.png"; sourceTree = "<group>"; };
@@ -138,6 +141,7 @@
 		E29BA857239DDCF400C81323 /* HeroView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroView.xib; sourceTree = "<group>"; };
 		E29BA859239DDE6600C81323 /* HeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroView.swift; sourceTree = "<group>"; };
 		E29BA85F239DDFED00C81323 /* HeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
+		E2B2010623B0EC54008E1AFE /* ComponentCoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentCoreViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,15 @@
 				49BF640FB25F95848B884830 /* Pods-CleanSwiftLabTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E211911223AAA46D001A25F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E2844E4F23998F9700F634E7 /* BaseView.swift */,
+				E22676C7239AA8D800B46987 /* BaseViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E22676CC239AD78B00B46987 /* Components */ = {
@@ -256,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				E22676E6239AE86A00B46987 /* ComponentViewModel.swift */,
+				E2B2010623B0EC54008E1AFE /* ComponentCoreViewModel.swift */,
 			);
 			path = ComponentsCore;
 			sourceTree = "<group>";
@@ -375,7 +389,7 @@
 		E2828FEE23A311FC0001C354 /* RouterApp */ = {
 			isa = PBXGroup;
 			children = (
-				E2828FEF23A312110001C354 /* SceneRouter.swift */,
+				E211911323AAA516001A25F8 /* RouterApp.swift */,
 			);
 			path = RouterApp;
 			sourceTree = "<group>";
@@ -461,7 +475,6 @@
 		E2844E2123998E2900F634E7 /* CleanSwiftLab */ = {
 			isa = PBXGroup;
 			children = (
-				E2828FEE23A311FC0001C354 /* RouterApp */,
 				E2844E4E23998F8C00F634E7 /* Core */,
 				E22676F3239C22C000B46987 /* Utils */,
 				E22676CC239AD78B00B46987 /* Components */,
@@ -517,9 +530,10 @@
 		E2844E4E23998F8C00F634E7 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				E2844E4F23998F9700F634E7 /* BaseView.swift */,
-				E22676C7239AA8D800B46987 /* BaseViewController.swift */,
+				E211911223AAA46D001A25F8 /* View */,
+				E2828FEE23A311FC0001C354 /* RouterApp */,
 				E22676EF239AEC7700B46987 /* BaseEnum.swift */,
+				E2828FEF23A312110001C354 /* SceneCreator.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -760,12 +774,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E211911423AAA516001A25F8 /* RouterApp.swift in Sources */,
 				E22676D3239AD80400B46987 /* CarruselCell.swift in Sources */,
 				E24C6354239EBD3200CBFF14 /* HeroWorker.swift in Sources */,
 				E22676F5239C22DD00B46987 /* JSONEncoder+Decoder.swift in Sources */,
 				E2267711239DCBB200B46987 /* ButtonFooterView.swift in Sources */,
 				E2844E4B23998F3F00F634E7 /* HomeFeedPresenter.swift in Sources */,
 				E29BA860239DDFED00C81323 /* HeroViewController.swift in Sources */,
+				E2B2010723B0EC54008E1AFE /* ComponentCoreViewModel.swift in Sources */,
 				E24C634D239E901400CBFF14 /* HomeFeedRouter.swift in Sources */,
 				E22676DF239ADE3200B46987 /* CarruselViewModel.swift in Sources */,
 				E226770C239DA83F00B46987 /* HeroPreviewViewModel.swift in Sources */,
@@ -788,7 +804,7 @@
 				E24C6357239EBD6A00CBFF14 /* HeroEntity.swift in Sources */,
 				E24C6360239F0B1F00CBFF14 /* HeroRouter.swift in Sources */,
 				E2844E2B23998E2900F634E7 /* CleanSwiftLab.xcdatamodeld in Sources */,
-				E2828FF023A312110001C354 /* SceneRouter.swift in Sources */,
+				E2828FF023A312110001C354 /* SceneCreator.swift in Sources */,
 				E2844E2323998E2900F634E7 /* AppDelegate.swift in Sources */,
 				E22676C8239AA8D800B46987 /* BaseViewController.swift in Sources */,
 				E22676EE239AEBEA00B46987 /* HomeFeedEntity.swift in Sources */,
