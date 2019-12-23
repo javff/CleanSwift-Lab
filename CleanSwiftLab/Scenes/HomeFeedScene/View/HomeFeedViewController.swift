@@ -16,6 +16,16 @@ class HomeFeedViewController: BaseViewController <HomeFeedView> {
   
     var interactor: HomeFeedInteractorProtocol?
     var router: HomeFeedRouterProtocol?
+    let componentFactoryView: ComponentFactoryViewProtocol
+    
+    init(componentFactoryView: ComponentFactoryViewProtocol = ComponentFactoryView()){
+        self.componentFactoryView = componentFactoryView
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,38 +45,10 @@ class HomeFeedViewController: BaseViewController <HomeFeedView> {
 extension HomeFeedViewController : HomeViewDisplayLogic {
    
     func displayHome(components: [ComponentsCoreViewModelType]) {
-        for component in components {
-            renderCompoent(component: component)
-        }
-    }
-    
-    private func renderCompoent(component: ComponentsCoreViewModelType){
-        var view: UIView?
-        
-        switch component {
-        case let .carrusel(viewModel):
-            let carruselView = CarruselView(viewModel:viewModel)
-            carruselView.delegate = self
-            view = carruselView
-            
-        case let .title(viewModel):
-            let titleView = TitleView(viewModel: viewModel)
-            view = titleView
-            
-        case let .heroPreview(viewModel):
-            let heroPreview = HeroPreviewView(viewModel: viewModel)
-            heroPreview.delegate = self
-            view = heroPreview
-            
-        case let .footerButton(viewModel):
-            let footerButton = ButtonFooterView(viewModel: viewModel)
-            view = footerButton
-            
-        case .unknown: break
-        }
-        
-        if let view = view{
-            baseView?.containerStackView.addArrangedSubview(view)
+        for componentViewModel in components {
+            if let view = componentFactoryView.createComponent(with: componentViewModel, and: self){
+                self.baseView?.containerStackView.addArrangedSubview(view)
+            }
         }
     }
 }

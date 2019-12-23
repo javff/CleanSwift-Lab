@@ -16,6 +16,12 @@ protocol HomeFeedPresenterProtocol: class{
 class HomeFeedPresenter: NSObject, HomeFeedPresenterProtocol {
     
     weak var viewController: HomeFeedViewController?
+    let componentFactoryModel: ComponentFactoryModelProtocol
+    
+    init(componentFactoryModel: ComponentFactoryModelProtocol = ComponentFactoryModel()) {
+        self.componentFactoryModel = componentFactoryModel
+        super.init()
+    }
     
     func showFeed(items: [HomeFeedEntity]) {
         let components = items.map{transform($0)}
@@ -27,7 +33,13 @@ class HomeFeedPresenter: NSObject, HomeFeedPresenterProtocol {
     }
     
     private func transform(_ homeFeedEntity: HomeFeedEntity) -> ComponentsCoreViewModelType{
-        let viewModel = ComponentsCoreViewModelType(type: homeFeedEntity.type, data: homeFeedEntity.data)
-        return viewModel
+        
+        guard let data = homeFeedEntity.data.data(using: .utf8) else{
+            return .unknown
+        }
+        
+        return componentFactoryModel.createModel(type: homeFeedEntity.type, data: data)
     }
 }
+
+

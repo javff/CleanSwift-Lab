@@ -43,6 +43,7 @@
 		E24C635B239EC74A00CBFF14 /* HeroCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24C635A239EC74A00CBFF14 /* HeroCreator.swift */; };
 		E24C635D239ECB8F00CBFF14 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24C635C239ECB8F00CBFF14 /* UIColor+Hex.swift */; };
 		E24C6360239F0B1F00CBFF14 /* HeroRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24C635F239F0B1F00CBFF14 /* HeroRouter.swift */; };
+		E265A14B23B1303600822F1A /* ComponentFactoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265A14A23B1303600822F1A /* ComponentFactoryModel.swift */; };
 		E2828FF023A312110001C354 /* SceneCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2828FEF23A312110001C354 /* SceneCreator.swift */; };
 		E2828FF623A33B560001C354 /* HomeSceneTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2828FF523A33B560001C354 /* HomeSceneTest.swift */; };
 		E2828FF923A952EF0001C354 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2828FF823A952EF0001C354 /* TestUtils.swift */; };
@@ -63,7 +64,7 @@
 		E29BA858239DDCF400C81323 /* HeroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29BA857239DDCF400C81323 /* HeroView.xib */; };
 		E29BA85A239DDE6600C81323 /* HeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29BA859239DDE6600C81323 /* HeroView.swift */; };
 		E29BA860239DDFED00C81323 /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29BA85F239DDFED00C81323 /* HeroViewController.swift */; };
-		E2B2010723B0EC54008E1AFE /* ComponentCoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B2010623B0EC54008E1AFE /* ComponentCoreViewModel.swift */; };
+		E2B2010723B0EC54008E1AFE /* ComponentFactoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B2010623B0EC54008E1AFE /* ComponentFactoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		E24C635A239EC74A00CBFF14 /* HeroCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCreator.swift; sourceTree = "<group>"; };
 		E24C635C239ECB8F00CBFF14 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		E24C635F239F0B1F00CBFF14 /* HeroRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroRouter.swift; sourceTree = "<group>"; };
+		E265A14A23B1303600822F1A /* ComponentFactoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentFactoryModel.swift; sourceTree = "<group>"; };
 		E2828FEF23A312110001C354 /* SceneCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCreator.swift; sourceTree = "<group>"; };
 		E2828FF523A33B560001C354 /* HomeSceneTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSceneTest.swift; sourceTree = "<group>"; };
 		E2828FF823A952EF0001C354 /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
@@ -141,7 +143,7 @@
 		E29BA857239DDCF400C81323 /* HeroView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroView.xib; sourceTree = "<group>"; };
 		E29BA859239DDE6600C81323 /* HeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroView.swift; sourceTree = "<group>"; };
 		E29BA85F239DDFED00C81323 /* HeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
-		E2B2010623B0EC54008E1AFE /* ComponentCoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentCoreViewModel.swift; sourceTree = "<group>"; };
+		E2B2010623B0EC54008E1AFE /* ComponentFactoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentFactoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,13 +244,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		E22676E0239AE81500B46987 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		E22676E1239AE81D00B46987 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,7 +264,8 @@
 			isa = PBXGroup;
 			children = (
 				E22676E6239AE86A00B46987 /* ComponentViewModel.swift */,
-				E2B2010623B0EC54008E1AFE /* ComponentCoreViewModel.swift */,
+				E2B2010623B0EC54008E1AFE /* ComponentFactoryView.swift */,
+				E265A14A23B1303600822F1A /* ComponentFactoryModel.swift */,
 			);
 			path = ComponentsCore;
 			sourceTree = "<group>";
@@ -398,16 +394,8 @@
 			isa = PBXGroup;
 			children = (
 				E2828FF523A33B560001C354 /* HomeSceneTest.swift */,
-				E2828FF223A3399C0001C354 /* Mocks */,
 			);
 			path = HomeFeedSceneTest;
-			sourceTree = "<group>";
-		};
-		E2828FF223A3399C0001C354 /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Mocks;
 			sourceTree = "<group>";
 		};
 		E2828FF723A952DD0001C354 /* Utils */ = {
@@ -510,7 +498,6 @@
 				E22676E8239AEB2D00B46987 /* Workers */,
 				E22676E2239AE82200B46987 /* Presenter */,
 				E22676E1239AE81D00B46987 /* Interactor */,
-				E22676E0239AE81500B46987 /* ViewModel */,
 				E2844E4623998F1700F634E7 /* View */,
 				E22676F1239AF1C000B46987 /* HomeFeedCreator.swift */,
 			);
@@ -781,7 +768,7 @@
 				E2267711239DCBB200B46987 /* ButtonFooterView.swift in Sources */,
 				E2844E4B23998F3F00F634E7 /* HomeFeedPresenter.swift in Sources */,
 				E29BA860239DDFED00C81323 /* HeroViewController.swift in Sources */,
-				E2B2010723B0EC54008E1AFE /* ComponentCoreViewModel.swift in Sources */,
+				E2B2010723B0EC54008E1AFE /* ComponentFactoryView.swift in Sources */,
 				E24C634D239E901400CBFF14 /* HomeFeedRouter.swift in Sources */,
 				E22676DF239ADE3200B46987 /* CarruselViewModel.swift in Sources */,
 				E226770C239DA83F00B46987 /* HeroPreviewViewModel.swift in Sources */,
@@ -792,6 +779,7 @@
 				E226770A239DA76800B46987 /* HeroPreviewView.swift in Sources */,
 				E24C635D239ECB8F00CBFF14 /* UIColor+Hex.swift in Sources */,
 				E29BA85A239DDE6600C81323 /* HeroView.swift in Sources */,
+				E265A14B23B1303600822F1A /* ComponentFactoryModel.swift in Sources */,
 				E22676EA239AEB3C00B46987 /* HomeFeedWorker.swift in Sources */,
 				E22676F2239AF1C000B46987 /* HomeFeedCreator.swift in Sources */,
 				E2267700239D9F4C00B46987 /* TitleViewModel.swift in Sources */,
