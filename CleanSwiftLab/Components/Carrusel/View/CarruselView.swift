@@ -34,10 +34,10 @@ class CarruselView: BaseView {
     }()
     
     var gradient:CAGradientLayer?
+    var imagesName: [String] = []
     
     //MARK: - Vars
     let reuseIdentifier = String(describing: CarruselCell.self)
-    let viewModel: CarruselViewModel
     weak var delegate: CarruselViewDelegate?
     
     override func layoutSubviews() {
@@ -46,8 +46,7 @@ class CarruselView: BaseView {
         gradient?.frame = bounds
     }
     
-    init(frame: CGRect = .zero, viewModel: CarruselViewModel) {
-        self.viewModel = viewModel
+    override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
         setupCell()
@@ -68,9 +67,10 @@ class CarruselView: BaseView {
         collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
     }
     
-    func applyGradientWith(from: UIColor, to: UIColor){
-        
+    func updateImages(imagesModel: [CarruselItemViewModel]) {
+        imagesName = imagesModel.map(\.imageName)
     }
+
 }
 
 //MARK: - Implement CollectionView dataSource and delegate
@@ -78,7 +78,7 @@ class CarruselView: BaseView {
 extension CarruselView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.items.count
+        return imagesName.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -87,7 +87,7 @@ extension CarruselView: UICollectionViewDataSource, UICollectionViewDelegate, UI
             fatalError()
         }
         
-        cell.imageView.image = UIImage(named: viewModel.items[indexPath.item].imageName)
+        cell.imageView.image = UIImage(named: imagesName[indexPath.item])
         return cell
     }
     
@@ -96,7 +96,6 @@ extension CarruselView: UICollectionViewDataSource, UICollectionViewDelegate, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let item = viewModel.items[indexPath.item]
-        delegate?.carruselView(self, selected: item)
+//        let item = viewModel.items[indexPath.item]
     }
 }

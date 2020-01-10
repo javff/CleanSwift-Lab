@@ -10,22 +10,23 @@ import Foundation
 import UIKit
 
 protocol ComponentFactoryViewProtocol: class {
-    
-    typealias ComponentFactoryDelegate = (CarruselViewDelegate & HeroPreviewViewDelegate)
-
-    func createComponent(with viewModel: ComponentsCoreViewModelType, and delegate: ComponentFactoryDelegate) -> UIView?
+    func createComponent(with viewModel: ComponentsCoreViewModelType,
+                         and router: HomeFeedRouterProtocol?) -> UIView?
 }
 
 class ComponentFactoryView: NSObject, ComponentFactoryViewProtocol {
    
     func createComponent(with viewModel: ComponentsCoreViewModelType,
-                         and delegate: ComponentFactoryDelegate) -> UIView? {
+                         and router: HomeFeedRouterProtocol?) -> UIView? {
         
         switch viewModel {
             
         case let .carrusel(viewModel):
-            let carruselView = CarruselView(viewModel:viewModel)
-            carruselView.delegate = delegate
+            let carruselView = CarruselView()
+            let configurator = CarruselViewConfigurator<CarruselViewModel>(
+                images: \.items
+            )
+            configurator.configure(carruselView, for: viewModel)
             return carruselView
             
         case let .title(viewModel):
@@ -33,12 +34,27 @@ class ComponentFactoryView: NSObject, ComponentFactoryViewProtocol {
             return titleView
             
         case let .heroPreview(viewModel):
-            let heroPreview = HeroPreviewView(viewModel: viewModel)
-            heroPreview.delegate = delegate
+            let configurator = HeroPreviewConfigurator<HeroPreviewViewModel>(
+                imageName: \.imageName,
+                content: \.content,
+                title: \.name
+            )
+            
+            let handlerAction = PreviewHandlerAction(
+                viewModel: viewModel,
+                router: router
+            )
+            
+            let heroPreview = HeroPreviewView(handlerActions: handlerAction)
+            configurator.configure(heroPreview, for: viewModel)
             return heroPreview
             
         case let .footerButton(viewModel):
-            let footerButton = ButtonFooterView(viewModel: viewModel)
+            let configurator = FooterButtonConfigurator<ButtonFooterViewModel>(
+                buttonsKeyPath: \.buttons
+            )
+            let footerButton = ButtonFooterView()
+            configurator.configure(footerButton, for: viewModel)
             return footerButton
             
         case .unknown:

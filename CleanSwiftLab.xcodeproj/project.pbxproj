@@ -61,6 +61,13 @@
 		E2844E4D23998F6900F634E7 /* HomeFeedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2844E4C23998F6900F634E7 /* HomeFeedView.xib */; };
 		E2844E5023998F9700F634E7 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2844E4F23998F9700F634E7 /* BaseView.swift */; };
 		E2844E52239991D200F634E7 /* HomeFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2844E51239991D200F634E7 /* HomeFeedView.swift */; };
+		E289993F23BE7DCC00F36472 /* HeroPreviewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289993E23BE7DCC00F36472 /* HeroPreviewConfigurator.swift */; };
+		E289994123BE7DDA00F36472 /* ComponentConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289994023BE7DDA00F36472 /* ComponentConfigurator.swift */; };
+		E289994323BE7F1300F36472 /* FooterButtonConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289994223BE7F1300F36472 /* FooterButtonConfigurator.swift */; };
+		E289994523BFB87D00F36472 /* CarruselConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289994423BFB87D00F36472 /* CarruselConfigurator.swift */; };
+		E289994723BFCE8300F36472 /* KeyPathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289994623BFCE8300F36472 /* KeyPathExtension.swift */; };
+		E290807623C4DF01002EC197 /* HandlerActionsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290807523C4DF01002EC197 /* HandlerActionsProtocol.swift */; };
+		E290807A23C62464002EC197 /* PreViewHandlerActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290807923C62464002EC197 /* PreViewHandlerActions.swift */; };
 		E29BA858239DDCF400C81323 /* HeroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29BA857239DDCF400C81323 /* HeroView.xib */; };
 		E29BA85A239DDE6600C81323 /* HeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29BA859239DDE6600C81323 /* HeroView.swift */; };
 		E29BA860239DDFED00C81323 /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29BA85F239DDFED00C81323 /* HeroViewController.swift */; };
@@ -140,6 +147,13 @@
 		E2844E4C23998F6900F634E7 /* HomeFeedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeFeedView.xib; sourceTree = "<group>"; };
 		E2844E4F23998F9700F634E7 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		E2844E51239991D200F634E7 /* HomeFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedView.swift; sourceTree = "<group>"; };
+		E289993E23BE7DCC00F36472 /* HeroPreviewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroPreviewConfigurator.swift; sourceTree = "<group>"; };
+		E289994023BE7DDA00F36472 /* ComponentConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentConfigurator.swift; sourceTree = "<group>"; };
+		E289994223BE7F1300F36472 /* FooterButtonConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterButtonConfigurator.swift; sourceTree = "<group>"; };
+		E289994423BFB87D00F36472 /* CarruselConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarruselConfigurator.swift; sourceTree = "<group>"; };
+		E289994623BFCE8300F36472 /* KeyPathExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPathExtension.swift; sourceTree = "<group>"; };
+		E290807523C4DF01002EC197 /* HandlerActionsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandlerActionsProtocol.swift; sourceTree = "<group>"; };
+		E290807923C62464002EC197 /* PreViewHandlerActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreViewHandlerActions.swift; sourceTree = "<group>"; };
 		E29BA857239DDCF400C81323 /* HeroView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroView.xib; sourceTree = "<group>"; };
 		E29BA859239DDE6600C81323 /* HeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroView.swift; sourceTree = "<group>"; };
 		E29BA85F239DDFED00C81323 /* HeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +225,8 @@
 		E22676CD239AD79700B46987 /* Carrusel */ = {
 			isa = PBXGroup;
 			children = (
+				E22676DE239ADE3200B46987 /* CarruselViewModel.swift */,
+				E289994423BFB87D00F36472 /* CarruselConfigurator.swift */,
 				E22676DD239ADE1D00B46987 /* ViewModel */,
 				E22676D9239ADD6200B46987 /* View */,
 			);
@@ -229,9 +245,9 @@
 		E22676D9239ADD6200B46987 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E22676CE239AD7A400B46987 /* Cells */,
 				E22676D5239AD85800B46987 /* CarruselView.swift */,
 				E22676F6239C52D100B46987 /* CarruselView.xib */,
+				E22676CE239AD7A400B46987 /* Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -239,7 +255,6 @@
 		E22676DD239ADE1D00B46987 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				E22676DE239ADE3200B46987 /* CarruselViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -266,6 +281,7 @@
 				E22676E6239AE86A00B46987 /* ComponentViewModel.swift */,
 				E2B2010623B0EC54008E1AFE /* ComponentFactoryView.swift */,
 				E265A14A23B1303600822F1A /* ComponentFactoryModel.swift */,
+				E289994023BE7DDA00F36472 /* ComponentConfigurator.swift */,
 			);
 			path = ComponentsCore;
 			sourceTree = "<group>";
@@ -291,6 +307,7 @@
 			children = (
 				E22676F4239C22DD00B46987 /* JSONEncoder+Decoder.swift */,
 				E24C635C239ECB8F00CBFF14 /* UIColor+Hex.swift */,
+				E289994623BFCE8300F36472 /* KeyPathExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -336,6 +353,8 @@
 				E2267707239DA66900B46987 /* HeroPreviewView.xib */,
 				E2267709239DA76800B46987 /* HeroPreviewView.swift */,
 				E226770B239DA83F00B46987 /* HeroPreviewViewModel.swift */,
+				E289993E23BE7DCC00F36472 /* HeroPreviewConfigurator.swift */,
+				E290807923C62464002EC197 /* PreViewHandlerActions.swift */,
 			);
 			path = HeroPreview;
 			sourceTree = "<group>";
@@ -346,6 +365,7 @@
 				E226770E239DCB0F00B46987 /* ButtonFooterView.xib */,
 				E2267710239DCBB200B46987 /* ButtonFooterView.swift */,
 				E2267712239DCBC600B46987 /* ButtonFooterViewModel.swift */,
+				E289994223BE7F1300F36472 /* FooterButtonConfigurator.swift */,
 			);
 			path = FooterButtonView;
 			sourceTree = "<group>";
@@ -465,6 +485,7 @@
 			children = (
 				E2844E4E23998F8C00F634E7 /* Core */,
 				E22676F3239C22C000B46987 /* Utils */,
+				E290807423C4DEEE002EC197 /* Actions */,
 				E22676CC239AD78B00B46987 /* Components */,
 				E29BA855239DDCD700C81323 /* Scenes */,
 				E2844E2223998E2900F634E7 /* AppDelegate.swift */,
@@ -523,6 +544,14 @@
 				E2828FEF23A312110001C354 /* SceneCreator.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		E290807423C4DEEE002EC197 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				E290807523C4DF01002EC197 /* HandlerActionsProtocol.swift */,
+			);
+			path = Actions;
 			sourceTree = "<group>";
 		};
 		E29BA855239DDCD700C81323 /* Scenes */ = {
@@ -636,6 +665,11 @@
 				TargetAttributes = {
 					E2844E1E23998E2900F634E7 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					E2844E3523998E2C00F634E7 = {
 						CreatedOnToolsVersion = 10.1;
@@ -766,9 +800,12 @@
 				E24C6354239EBD3200CBFF14 /* HeroWorker.swift in Sources */,
 				E22676F5239C22DD00B46987 /* JSONEncoder+Decoder.swift in Sources */,
 				E2267711239DCBB200B46987 /* ButtonFooterView.swift in Sources */,
+				E289994523BFB87D00F36472 /* CarruselConfigurator.swift in Sources */,
+				E290807A23C62464002EC197 /* PreViewHandlerActions.swift in Sources */,
 				E2844E4B23998F3F00F634E7 /* HomeFeedPresenter.swift in Sources */,
 				E29BA860239DDFED00C81323 /* HeroViewController.swift in Sources */,
 				E2B2010723B0EC54008E1AFE /* ComponentFactoryView.swift in Sources */,
+				E289994123BE7DDA00F36472 /* ComponentConfigurator.swift in Sources */,
 				E24C634D239E901400CBFF14 /* HomeFeedRouter.swift in Sources */,
 				E22676DF239ADE3200B46987 /* CarruselViewModel.swift in Sources */,
 				E226770C239DA83F00B46987 /* HeroPreviewViewModel.swift in Sources */,
@@ -783,16 +820,19 @@
 				E22676EA239AEB3C00B46987 /* HomeFeedWorker.swift in Sources */,
 				E22676F2239AF1C000B46987 /* HomeFeedCreator.swift in Sources */,
 				E2267700239D9F4C00B46987 /* TitleViewModel.swift in Sources */,
+				E289994723BFCE8300F36472 /* KeyPathExtension.swift in Sources */,
 				E24C635B239EC74A00CBFF14 /* HeroCreator.swift in Sources */,
 				E2844E52239991D200F634E7 /* HomeFeedView.swift in Sources */,
 				E22676D6239AD85800B46987 /* CarruselView.swift in Sources */,
 				E22676FC239C68E500B46987 /* BulletsView.swift in Sources */,
+				E289993F23BE7DCC00F36472 /* HeroPreviewConfigurator.swift in Sources */,
 				E24C6359239EC6A200CBFF14 /* HeroPresenter.swift in Sources */,
 				E2267713239DCBC600B46987 /* ButtonFooterViewModel.swift in Sources */,
 				E24C6357239EBD6A00CBFF14 /* HeroEntity.swift in Sources */,
 				E24C6360239F0B1F00CBFF14 /* HeroRouter.swift in Sources */,
 				E2844E2B23998E2900F634E7 /* CleanSwiftLab.xcdatamodeld in Sources */,
 				E2828FF023A312110001C354 /* SceneCreator.swift in Sources */,
+				E290807623C4DF01002EC197 /* HandlerActionsProtocol.swift in Sources */,
 				E2844E2323998E2900F634E7 /* AppDelegate.swift in Sources */,
 				E22676C8239AA8D800B46987 /* BaseViewController.swift in Sources */,
 				E22676EE239AEBEA00B46987 /* HomeFeedEntity.swift in Sources */,
@@ -801,6 +841,7 @@
 				E2844E5023998F9700F634E7 /* BaseView.swift in Sources */,
 				E22676F0239AEC7700B46987 /* BaseEnum.swift in Sources */,
 				E24C634F239EBADA00CBFF14 /* HeroViewModel.swift in Sources */,
+				E289994323BE7F1300F36472 /* FooterButtonConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

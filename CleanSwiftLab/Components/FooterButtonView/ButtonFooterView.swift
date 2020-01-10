@@ -13,21 +13,10 @@ class ButtonFooterView: BaseView {
     
     @IBOutlet weak var containerStackView: UIStackView!
     
-    let viewModel:ButtonFooterViewModel
     
-    init(frame: CGRect = .zero, viewModel: ButtonFooterViewModel) {
-        self.viewModel = viewModel
-        super.init(frame: frame)
-        self.setupView()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func setupView(){
-        for buttonViewModel in viewModel.buttons {
-            let button = createButton(with: buttonViewModel.text)
+    public func bindView(buttons: [ButtonViewModel]) {
+        for buttonModel in buttons {
+            let button = createButton(with: buttonModel.text)
             containerStackView.addArrangedSubview(button)
             button.translatesAutoresizingMaskIntoConstraints = false
             button.heightAnchor.constraint(greaterThanOrEqualToConstant: 40).isActive = true

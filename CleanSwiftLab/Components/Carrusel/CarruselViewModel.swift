@@ -13,6 +13,5 @@ struct CarruselViewModel: Codable {
 }
 
 struct CarruselItemViewModel: Codable{
-    let id: String
     let imageName:String
 }

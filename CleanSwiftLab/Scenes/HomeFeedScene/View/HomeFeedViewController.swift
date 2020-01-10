@@ -30,11 +30,11 @@ class HomeFeedViewController: BaseViewController <HomeFeedView> {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        interactor?.getFeed()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        interactor?.getFeed()
     }
     
     private func setupView(){
@@ -46,24 +46,9 @@ extension HomeFeedViewController : HomeViewDisplayLogic {
    
     func displayHome(components: [ComponentsCoreViewModelType]) {
         for componentViewModel in components {
-            if let view = componentFactoryView.createComponent(with: componentViewModel, and: self){
+            if let view = componentFactoryView.createComponent(with: componentViewModel, and: router) {
                 self.baseView?.containerStackView.addArrangedSubview(view)
             }
         }
-    }
-}
-
-//MARK: - Implement CarruselViewDelegate //
-extension HomeFeedViewController: CarruselViewDelegate {
-  
-    func carruselView(_ carruselView: CarruselView, selected item: CarruselItemViewModel) {
-        //TODO: handler carrusel item tapped
-    }
-}
-
-extension HomeFeedViewController: HeroPreviewViewDelegate {
- 
-    func heroPreviewView(_ heroPreviewView: HeroPreviewView, tapped hero: HeroPreviewViewModel) {
-        router?.navigateToHero(heroPreview: hero)
     }
 }
