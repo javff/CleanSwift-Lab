@@ -10,18 +10,21 @@ import Foundation
 import UIKit
 
 protocol HomeFeedRouterProtocol: class {
-    func navigateToHero(heroPreview: HeroPreviewViewModel)
-    func navigateToBrand(brandId: String)
+    var viewController: UIViewController? {get set}
 }
 
 protocol HeroDataPassing: class {
     var heroId: String {get set}
 }
 
+typealias ComponentsRouterProtocol = (HeroPreviewRouterProtocol)
+
 
 class HomeFeedRouter: HomeFeedRouterProtocol {
-    
     weak var viewController: UIViewController?
+}
+
+extension HomeFeedRouter: ComponentsRouterProtocol {
     
     func navigateToHero(heroPreview: HeroPreviewViewModel) {
         let destination = HeroCreator(heroId: heroPreview.id).configure()
@@ -30,9 +33,4 @@ class HomeFeedRouter: HomeFeedRouterProtocol {
             .navigationController?
             .pushViewController(destination, animated: true)
     }
-    
-    func navigateToBrand(brandId: String) {
-
-    }
-    
 }

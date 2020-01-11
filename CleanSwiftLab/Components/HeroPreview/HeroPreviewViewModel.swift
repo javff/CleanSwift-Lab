@@ -12,6 +12,5 @@ struct HeroPreviewViewModel: Codable {
     let id: String
     let imageName: String
     let content: String
-    let name: String
-    
+    let title: String
 }

@@ -11,9 +11,9 @@ import Foundation
 public class PreviewHandlerAction: NSObject, HandlerActionProtocol {
     
     let viewModel: HeroPreviewViewModel
-    let router: HomeFeedRouterProtocol?
+    let router: HeroPreviewRouterProtocol?
     
-    init(viewModel:HeroPreviewViewModel, router: HomeFeedRouterProtocol?) {
+    init(viewModel:HeroPreviewViewModel, router: HeroPreviewRouterProtocol?) {
         self.viewModel = viewModel
         self.router = router
         super.init()

@@ -11,13 +11,13 @@ import UIKit
 
 protocol ComponentFactoryViewProtocol: class {
     func createComponent(with viewModel: ComponentsCoreViewModelType,
-                         and router: HomeFeedRouterProtocol?) -> UIView?
+                         and router: ComponentsRouterProtocol?) -> UIView?
 }
 
 class ComponentFactoryView: NSObject, ComponentFactoryViewProtocol {
    
     func createComponent(with viewModel: ComponentsCoreViewModelType,
-                         and router: HomeFeedRouterProtocol?) -> UIView? {
+                         and router: ComponentsRouterProtocol?) -> UIView? {
         
         switch viewModel {
             
@@ -37,7 +37,7 @@ class ComponentFactoryView: NSObject, ComponentFactoryViewProtocol {
             let configurator = HeroPreviewConfigurator<HeroPreviewViewModel>(
                 imageName: \.imageName,
                 content: \.content,
-                title: \.name
+                title: \.title
             )
             
             let handlerAction = PreviewHandlerAction(

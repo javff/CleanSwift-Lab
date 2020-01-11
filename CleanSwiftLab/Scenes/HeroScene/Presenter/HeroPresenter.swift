@@ -10,12 +10,14 @@ import Foundation
 
 protocol HeroPresenterProtocol: class {
     func showHero(heroEntity: HeroEntity)
+    func changeHeroLayout(state: SceneState)
+    func closeView()
     func showError(error: Error)
 }
 
 
 class HeroPresenter: HeroPresenterProtocol {
-    
+
     weak var viewController: HeroViewDisplayLogic?
     
     
@@ -27,6 +29,14 @@ class HeroPresenter: HeroPresenterProtocol {
                                            realName: heroEntity.realName,
                                            description: heroEntity.description)
         viewController?.displayHero(viewModel: viewModel)
+    }
+    
+    func changeHeroLayout(state: SceneState) {
+        viewController?.renderState(state: state)
+    }
+    
+    func closeView() {
+        viewController?.router?.goToBack()
     }
     
     func showError(error: Error) {

@@ -10,7 +10,9 @@ import Foundation
 import UIKit
 
 protocol HeroViewDisplayLogic: class {
+    var router: HeroRouterProtocol? {get}
     func displayHero(viewModel: HeroViewModel)
+    func renderState(state: SceneState)
 }
 
 class HeroViewController: BaseViewController<HeroView> {
@@ -40,25 +42,17 @@ class HeroViewController: BaseViewController<HeroView> {
 
     }
     
-    @objc func backButtonTapped(){
-        if baseView?.isOpen ?? false {
-            baseView?.changeLayoutView(open: false)
-            return
-        }
-        router?.goToBack()
+    @objc func backButtonTapped() {
+        self.interactor?.change(newState: .collapsed)
     }
     
-    @objc func showMoreButtonTapped(){
-        
-        guard let baseView = baseView else {
-            return
-        }
-        
-        baseView.changeLayoutView(open: !baseView.isOpen)
+    @objc func showMoreButtonTapped() {
+        self.interactor?.change(newState: .open)
     }
 }
 
 extension HeroViewController: HeroViewDisplayLogic {
+    
     func displayHero(viewModel: HeroViewModel) {
         baseView?.imageView.image = UIImage(named: viewModel.imageName)
         baseView?.heroNameLabel.text = viewModel.heroName
@@ -67,5 +61,8 @@ extension HeroViewController: HeroViewDisplayLogic {
         baseView?.textView.text = viewModel.description
     }
     
-    
+    func renderState(state: SceneState) {
+        guard let view = self.baseView else {return}
+        view.changeLayoutView(open: state == .open)
+    }
 }

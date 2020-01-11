@@ -8,8 +8,15 @@
 
 import Foundation
 
+enum SceneState{
+    case open
+    case collapsed
+}
+
 protocol HeroInteractorProtocol: class {
+    var state: SceneState {get}
     func getHero()
+    func change(newState: SceneState)
 }
 
 protocol HeroStoreProtocol: class {
@@ -21,6 +28,7 @@ class HeroInteractor:NSObject, HeroInteractorProtocol, HeroStoreProtocol {
     var heroId: String
     var presenter: HeroPresenterProtocol?
     let worker: HeroWorkerProtocol
+    var state: SceneState = .collapsed
     
     init(worker: HeroWorkerProtocol = HeroWorker(), heroId: String){
         self.heroId = heroId
@@ -45,5 +53,16 @@ class HeroInteractor:NSObject, HeroInteractorProtocol, HeroStoreProtocol {
             }
             
         }
+    }
+    
+    func change(newState: SceneState) {
+        
+        if state == .collapsed && newState == .collapsed {
+            self.presenter?.closeView()
+        }
+        
+        // else change state //
+        state = newState
+        self.presenter?.changeHeroLayout(state: state)
     }
 }

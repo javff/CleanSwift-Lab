@@ -15,7 +15,7 @@ protocol HomeViewDisplayLogic: class {
 class HomeFeedViewController: BaseViewController <HomeFeedView> {
   
     var interactor: HomeFeedInteractorProtocol?
-    var router: HomeFeedRouterProtocol?
+    var router: (HomeFeedRouterProtocol & ComponentsRouterProtocol)?
     let componentFactoryView: ComponentFactoryViewProtocol
     
     init(componentFactoryView: ComponentFactoryViewProtocol = ComponentFactoryView()){

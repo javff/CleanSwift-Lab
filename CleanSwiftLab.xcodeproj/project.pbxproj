@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		63BBE064684FD14C0DE1F157 /* Pods_CleanSwiftLabTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC0B34F146D6F998AB93DBA /* Pods_CleanSwiftLabTests.framework */; };
+		A89CF50923CA04E7004879C7 /* HeroPreviewRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CF50823CA04E7004879C7 /* HeroPreviewRouterProtocol.swift */; };
 		AAA569CB3987B9269283DCD0 /* Pods_CleanSwiftLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E837916D3E79118F8B29F8 /* Pods_CleanSwiftLab.framework */; };
-		E211911423AAA516001A25F8 /* RouterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E211911323AAA516001A25F8 /* RouterApp.swift */; };
 		E22676C8239AA8D800B46987 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22676C7239AA8D800B46987 /* BaseViewController.swift */; };
 		E22676CA239AA98400B46987 /* HomeFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22676C9239AA98400B46987 /* HomeFeedViewController.swift */; };
 		E22676D3239AD80400B46987 /* CarruselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22676D1239AD80400B46987 /* CarruselCell.swift */; };
@@ -90,8 +90,8 @@
 		31E837916D3E79118F8B29F8 /* Pods_CleanSwiftLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanSwiftLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4988736FB6DD67BA43E53C4F /* Pods-CleanSwiftLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanSwiftLab.debug.xcconfig"; path = "Target Support Files/Pods-CleanSwiftLab/Pods-CleanSwiftLab.debug.xcconfig"; sourceTree = "<group>"; };
 		49BF640FB25F95848B884830 /* Pods-CleanSwiftLabTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanSwiftLabTests.release.xcconfig"; path = "Target Support Files/Pods-CleanSwiftLabTests/Pods-CleanSwiftLabTests.release.xcconfig"; sourceTree = "<group>"; };
+		A89CF50823CA04E7004879C7 /* HeroPreviewRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroPreviewRouterProtocol.swift; sourceTree = "<group>"; };
 		C87EEE1A86F140CF84F08EF7 /* Pods-CleanSwiftLabTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanSwiftLabTests.debug.xcconfig"; path = "Target Support Files/Pods-CleanSwiftLabTests/Pods-CleanSwiftLabTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E211911323AAA516001A25F8 /* RouterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterApp.swift; sourceTree = "<group>"; };
 		E22676C7239AA8D800B46987 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E22676C9239AA98400B46987 /* HomeFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedViewController.swift; sourceTree = "<group>"; };
 		E22676D1239AD80400B46987 /* CarruselCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarruselCell.swift; sourceTree = "<group>"; };
@@ -278,6 +278,7 @@
 		E22676E5239AE85900B46987 /* ComponentsCore */ = {
 			isa = PBXGroup;
 			children = (
+				E290807523C4DF01002EC197 /* HandlerActionsProtocol.swift */,
 				E22676E6239AE86A00B46987 /* ComponentViewModel.swift */,
 				E2B2010623B0EC54008E1AFE /* ComponentFactoryView.swift */,
 				E265A14A23B1303600822F1A /* ComponentFactoryModel.swift */,
@@ -355,6 +356,7 @@
 				E226770B239DA83F00B46987 /* HeroPreviewViewModel.swift */,
 				E289993E23BE7DCC00F36472 /* HeroPreviewConfigurator.swift */,
 				E290807923C62464002EC197 /* PreViewHandlerActions.swift */,
+				A89CF50823CA04E7004879C7 /* HeroPreviewRouterProtocol.swift */,
 			);
 			path = HeroPreview;
 			sourceTree = "<group>";
@@ -400,14 +402,6 @@
 				E24C635F239F0B1F00CBFF14 /* HeroRouter.swift */,
 			);
 			path = Router;
-			sourceTree = "<group>";
-		};
-		E2828FEE23A311FC0001C354 /* RouterApp */ = {
-			isa = PBXGroup;
-			children = (
-				E211911323AAA516001A25F8 /* RouterApp.swift */,
-			);
-			path = RouterApp;
 			sourceTree = "<group>";
 		};
 		E2828FF123A339900001C354 /* HomeFeedSceneTest */ = {
@@ -539,7 +533,6 @@
 			isa = PBXGroup;
 			children = (
 				E211911223AAA46D001A25F8 /* View */,
-				E2828FEE23A311FC0001C354 /* RouterApp */,
 				E22676EF239AEC7700B46987 /* BaseEnum.swift */,
 				E2828FEF23A312110001C354 /* SceneCreator.swift */,
 			);
@@ -549,7 +542,6 @@
 		E290807423C4DEEE002EC197 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				E290807523C4DF01002EC197 /* HandlerActionsProtocol.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -795,7 +787,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E211911423AAA516001A25F8 /* RouterApp.swift in Sources */,
 				E22676D3239AD80400B46987 /* CarruselCell.swift in Sources */,
 				E24C6354239EBD3200CBFF14 /* HeroWorker.swift in Sources */,
 				E22676F5239C22DD00B46987 /* JSONEncoder+Decoder.swift in Sources */,
@@ -820,6 +811,7 @@
 				E22676EA239AEB3C00B46987 /* HomeFeedWorker.swift in Sources */,
 				E22676F2239AF1C000B46987 /* HomeFeedCreator.swift in Sources */,
 				E2267700239D9F4C00B46987 /* TitleViewModel.swift in Sources */,
+				A89CF50923CA04E7004879C7 /* HeroPreviewRouterProtocol.swift in Sources */,
 				E289994723BFCE8300F36472 /* KeyPathExtension.swift in Sources */,
 				E24C635B239EC74A00CBFF14 /* HeroCreator.swift in Sources */,
 				E2844E52239991D200F634E7 /* HomeFeedView.swift in Sources */,
