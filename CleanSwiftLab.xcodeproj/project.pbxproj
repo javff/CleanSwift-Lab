@@ -43,6 +43,7 @@
 		E24C635B239EC74A00CBFF14 /* HeroCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24C635A239EC74A00CBFF14 /* HeroCreator.swift */; };
 		E24C635D239ECB8F00CBFF14 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24C635C239ECB8F00CBFF14 /* UIColor+Hex.swift */; };
 		E24C6360239F0B1F00CBFF14 /* HeroRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24C635F239F0B1F00CBFF14 /* HeroRouter.swift */; };
+		E25BA58123CCBF4F006C6A1C /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BA58023CCBF4F006C6A1C /* ContainerView.swift */; };
 		E265A14B23B1303600822F1A /* ComponentFactoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265A14A23B1303600822F1A /* ComponentFactoryModel.swift */; };
 		E2828FF023A312110001C354 /* SceneCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2828FEF23A312110001C354 /* SceneCreator.swift */; };
 		E2828FF623A33B560001C354 /* HomeSceneTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2828FF523A33B560001C354 /* HomeSceneTest.swift */; };
@@ -125,6 +126,7 @@
 		E24C635A239EC74A00CBFF14 /* HeroCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCreator.swift; sourceTree = "<group>"; };
 		E24C635C239ECB8F00CBFF14 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		E24C635F239F0B1F00CBFF14 /* HeroRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroRouter.swift; sourceTree = "<group>"; };
+		E25BA58023CCBF4F006C6A1C /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		E265A14A23B1303600822F1A /* ComponentFactoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentFactoryModel.swift; sourceTree = "<group>"; };
 		E2828FEF23A312110001C354 /* SceneCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCreator.swift; sourceTree = "<group>"; };
 		E2828FF523A33B560001C354 /* HomeSceneTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSceneTest.swift; sourceTree = "<group>"; };
@@ -416,6 +418,7 @@
 			isa = PBXGroup;
 			children = (
 				E2828FF823A952EF0001C354 /* TestUtils.swift */,
+				E25BA58023CCBF4F006C6A1C /* ContainerView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -841,6 +844,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E25BA58123CCBF4F006C6A1C /* ContainerView.swift in Sources */,
 				E2828FF623A33B560001C354 /* HomeSceneTest.swift in Sources */,
 				E2828FF923A952EF0001C354 /* TestUtils.swift in Sources */,
 				E282900923AA8EED0001C354 /* FooterButtonViewTest.swift in Sources */,
