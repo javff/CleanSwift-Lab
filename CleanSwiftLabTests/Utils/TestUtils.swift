@@ -11,7 +11,7 @@ import UIKit
 
 class TestUtils {
     
-    class func getWindow() -> UIWindow{
+    class func getWindow() -> UIWindow {
         let window = UIWindow(frame: CGRect(x: 0, y: 0, width: 375, height: 600))
         window.makeKeyAndVisible()
         return window
