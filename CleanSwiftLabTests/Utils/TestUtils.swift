@@ -12,8 +12,17 @@ import UIKit
 class TestUtils {
     
     class func getWindow() -> UIWindow{
-        let window = UIWindow(frame: UIScreen.main.bounds)
+        let window = UIWindow(frame: CGRect(x: 0, y: 0, width: 375, height: 600))
         window.makeKeyAndVisible()
         return window
+    }
+    
+    class func createContainerView() -> UIStackView {
+        let containerView = UIStackView(frame: self.getWindow().bounds)
+        containerView.distribution = .fill
+        containerView.alignment = .fill
+        containerView.axis = .vertical
+        containerView.backgroundColor = .red
+        return containerView
     }
 }

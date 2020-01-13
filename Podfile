@@ -11,7 +11,7 @@ target 'CleanSwiftLab' do
     inherit! :search_paths
     # Pods for testing
         pod 'Quick', '1.3.2 '
-        pod 'Nimble', '7.3.2'
+        pod 'Nimble'
         pod 'Nimble-Snapshots' , '6.9.0'
     
   end
