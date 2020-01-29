@@ -37,6 +37,14 @@ class FooterButtonViewTest: QuickSpec {
                    self.configurator.configure(self.footerButtonView, for: viewModel)
                    self.containerView.insertInContainer(self.footerButtonView)
                    expect(self.containerView) == snapshot()
+
+                }
+                
+                it("display with only button with container"){
+                    let viewModel = self.createButtons(buttonsText: ["Button test"])
+                    self.configurator.configure(self.footerButtonView, for: viewModel)
+                    self.containerView.insertInContainer(self.footerButtonView)
+                    expect(self.containerView) == snapshot()
                 }
                  
                 it("display with two buttons"){
