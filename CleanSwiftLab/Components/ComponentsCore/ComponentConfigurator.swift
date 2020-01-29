@@ -17,5 +17,5 @@ public protocol ComponentConfiguratorProtocol {
     
     func configure(_ view: ComponentView,
                    for model: ComponentModel,
-                   and viewDelegate:HandlerActions?)
+                   and actions:HandlerActions?)
 }

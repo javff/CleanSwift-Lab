@@ -19,7 +19,7 @@ public class PreviewHandlerAction: NSObject, HandlerActionProtocol {
         super.init()
     }
     
-    public lazy var handlerTapAction: () -> Void = {
+    public func handlerTapAction() {
         self.router?.navigateToHero(heroPreview: self.viewModel)
     }
 }

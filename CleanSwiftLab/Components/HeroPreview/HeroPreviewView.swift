@@ -55,5 +55,4 @@ class HeroPreviewView: BaseView {
     @objc func cardTapped(){
         self.handlerActions.handlerTapAction()
     }
-    
 }

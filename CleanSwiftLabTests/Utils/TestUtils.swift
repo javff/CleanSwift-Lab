@@ -25,4 +25,14 @@ class TestUtils {
         containerView.backgroundColor = .red
         return containerView
     }
+    
+    class func generateLoremItSum(iteration: Int) -> String {
+        
+        let lorem = "Lorem it sum lorem"
+        var result = ""
+        for i in 0...iteration {
+            result += lorem
+        }
+        return result
+    }
 }

@@ -17,5 +17,3 @@ enum ComponentsCoreViewModelType{
     case unknown
     
 }
-
-

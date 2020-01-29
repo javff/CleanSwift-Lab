@@ -15,15 +15,17 @@ struct HeroPreviewConfigurator<Model>: ComponentConfiguratorProtocol {
     typealias ComponentView = HeroPreviewView
     typealias HandlerActions = HandlerActionProtocol
 
-    let imageName: KeyPath<Model, String>
-    let content: KeyPath<Model, String>
-    let title: KeyPath<Model, String>
+    let imageName: KeyPath<Model, String?>
+    let content: KeyPath<Model, String?>
+    let title: KeyPath<Model, String?>
 
     func configure(_ view: HeroPreviewView,
                    for model: Model,
                    and viewDelegate: HandlerActionProtocol? = nil) {
         
-        view.imageView.image = UIImage(named: model[keyPath: imageName])
+        if let imageName = model[keyPath: imageName] {
+            view.imageView.image = UIImage(named: imageName)
+        }
         view.titleLabel.text = model[keyPath: title]
         view.descriptionLabel.text = model[keyPath: content]
     }

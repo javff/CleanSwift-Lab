@@ -15,10 +15,10 @@ protocol HomeViewDisplayLogic: class {
 class HomeFeedViewController: BaseViewController <HomeFeedView> {
   
     var interactor: HomeFeedInteractorProtocol?
-    var router: (HomeFeedRouterProtocol & ComponentsRouterProtocol)?
+    var router: HomeFeedRouterProtocol?
     let componentFactoryView: ComponentFactoryViewProtocol
     
-    init(componentFactoryView: ComponentFactoryViewProtocol = ComponentFactoryView()){
+    init(componentFactoryView: ComponentFactoryViewProtocol) {
         self.componentFactoryView = componentFactoryView
         super.init(nibName: nil, bundle: nil)
     }
@@ -32,6 +32,7 @@ class HomeFeedViewController: BaseViewController <HomeFeedView> {
         setupView()
         interactor?.getFeed()
     }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -46,7 +47,7 @@ extension HomeFeedViewController : HomeViewDisplayLogic {
    
     func displayHome(components: [ComponentsCoreViewModelType]) {
         for componentViewModel in components {
-            if let view = componentFactoryView.createComponent(with: componentViewModel, and: router) {
+            if let view = componentFactoryView.createComponent(with: componentViewModel) {
                 self.baseView?.containerStackView.addArrangedSubview(view)
             }
         }

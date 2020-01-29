@@ -15,7 +15,7 @@ protocol HomeFeedPresenterProtocol: class{
 
 class HomeFeedPresenter: NSObject, HomeFeedPresenterProtocol {
     
-    weak var viewController: HomeFeedViewController?
+    weak var viewController: HomeViewDisplayLogic?
     let componentFactoryModel: ComponentFactoryModelProtocol
     
     init(componentFactoryModel: ComponentFactoryModelProtocol = ComponentFactoryModel()) {

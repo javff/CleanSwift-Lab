@@ -8,20 +8,48 @@
 
 import Foundation
 import UIKit
+ 
+class HomeFeedCreator:NSObject, SceneCreatorProtocol {
+    
+    let homeContainer = DIContainer()
+    
+    override init() {
+        super.init()
+            
+        homeContainer
+           
+            .register(HomeFeedRouter.self, instance: HomeFeedRouter())
+            
+            .register(HeroPreviewRouterProtocol.self, { (resolver) in
+                return resolver.resolve(HomeFeedRouter.self)
+            })
+            
+            .register(HomeFeedPresenter.self, instance: HomeFeedPresenter())
+            
+            .register(HomeFeedInteractor.self, instance: HomeFeedInteractor())
+            
+            .register(DIContainer.self, instance: homeContainer)
+        
+            .register(HomeFeedViewController.self, { (resolver) in
+                let componentFactoryView = ComponentFactoryView(container: resolver.resolve(DIContainer.self))
+                let controller = HomeFeedViewController(componentFactoryView: componentFactoryView)
+                let interactor = resolver.resolve(HomeFeedInteractor.self)
+                let presenter = resolver.resolve(HomeFeedPresenter.self)
+                let router = resolver.resolve(HomeFeedRouter.self)
 
-class HomeFeedCreator: SceneCreatorProtocol{
+                router.viewController = controller
+                controller.interactor = interactor
+                interactor.presenter = presenter
+                controller.router = router
+                controller.interactor = interactor
+                presenter.viewController = controller
+                return controller
+            })
+        
+    }
   
     func configure() -> UIViewController {
-        let interactor = HomeFeedInteractor()
-        let presenter = HomeFeedPresenter()
-        let viewController = HomeFeedViewController()
-        let router = HomeFeedRouter()
-        
-        viewController.router = router
-        viewController.interactor = interactor
-        interactor.presenter = presenter
-        presenter.viewController = viewController
-        router.viewController = viewController
-        return viewController
+        return homeContainer.resolve(HomeFeedViewController.self)
     }
+    
 }

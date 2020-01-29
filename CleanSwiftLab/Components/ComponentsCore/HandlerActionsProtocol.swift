@@ -9,6 +9,6 @@
 import Foundation
 
 
-public protocol HandlerActionProtocol: AnyObject {
-    var handlerTapAction: () -> () {get}
+public protocol HandlerActionProtocol: AnyObject {    
+    func handlerTapAction()
 }

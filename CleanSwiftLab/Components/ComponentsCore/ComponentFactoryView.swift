@@ -10,14 +10,19 @@ import Foundation
 import UIKit
 
 protocol ComponentFactoryViewProtocol: class {
-    func createComponent(with viewModel: ComponentsCoreViewModelType,
-                         and router: ComponentsRouterProtocol?) -> UIView?
+    func createComponent(with viewModel: ComponentsCoreViewModelType) -> UIView?
 }
 
 class ComponentFactoryView: NSObject, ComponentFactoryViewProtocol {
+    
+    let container: DIContainer
+    
+    init(container: DIContainer) {
+        self.container = container
+        super.init()
+    }
    
-    func createComponent(with viewModel: ComponentsCoreViewModelType,
-                         and router: ComponentsRouterProtocol?) -> UIView? {
+    func createComponent(with viewModel: ComponentsCoreViewModelType) -> UIView? {
         
         switch viewModel {
             
@@ -42,7 +47,7 @@ class ComponentFactoryView: NSObject, ComponentFactoryViewProtocol {
             
             let handlerAction = PreviewHandlerAction(
                 viewModel: viewModel,
-                router: router
+                router: container.resolve(HeroPreviewRouterProtocol.self)
             )
             
             let heroPreview = HeroPreviewView(handlerActions: handlerAction)

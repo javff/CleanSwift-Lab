@@ -10,8 +10,6 @@ import Foundation
 
 struct CarruselViewConfigurator<Model>: ComponentConfiguratorProtocol {
     
-    
-
     typealias ComponentModel = Model
     typealias ComponentView = CarruselView
     typealias ComponentViewDelegate = CarruselViewDelegate

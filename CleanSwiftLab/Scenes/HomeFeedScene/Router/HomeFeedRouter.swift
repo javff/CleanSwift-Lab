@@ -17,14 +17,12 @@ protocol HeroDataPassing: class {
     var heroId: String {get set}
 }
 
-typealias ComponentsRouterProtocol = (HeroPreviewRouterProtocol)
-
 
 class HomeFeedRouter: HomeFeedRouterProtocol {
     weak var viewController: UIViewController?
 }
 
-extension HomeFeedRouter: ComponentsRouterProtocol {
+extension HomeFeedRouter: HeroPreviewRouterProtocol {
     
     func navigateToHero(heroPreview: HeroPreviewViewModel) {
         let destination = HeroCreator(heroId: heroPreview.id).configure()
